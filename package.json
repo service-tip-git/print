@@ -2,25 +2,23 @@
   "name": "@cap-js/print",
   "version": "0.1.0",
   "description": "CAP plugin for SAP Cloud Print Service.",
-  "repository": "@cap-js/print",
+  "repository": "cap-js/print",
   "homepage": "https://cap.cloud.sap/",
   "main": "cds-plugin.js",
   "author": "SAP SE (https://www.sap.com)",
   "license": "Apache-2.0",
   "files": [
     "index.cds",
-    "lib",
-    "srv"
+    "srv",
+    "cds-plugin.js",
+    "CHANGELOG.md"
   ],
   "keywords": [
-    "sap",
-    "cap",
-    "cps",
-    "print",
-    "plugin"
+    "CAP",
+    "CDS",
+    "Print"
   ],
   "dependencies": {
-    "@cap-js/print": "file:",
     "@sap-cloud-sdk/connectivity": "^3.26.4",
     "@sap-cloud-sdk/http-client": "^4.1.2",
     "@sap/xssec": "^3.6.2"
@@ -37,7 +35,6 @@
   ],
   "cds": {
     "requires": {
-      "destinations": true,
       "print": {
         "[development]": {
           "kind": "print-to-console"
@@ -47,9 +44,6 @@
         },
         "[hybrid]": {
           "kind": "print-to-service"
-        },
-        "vcap": {
-          "tag": "print"
         },
         "outbox": true
       },
